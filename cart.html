@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+<style>
+    #Youritem{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        gap: 15px 15px;
+        width: 81%;
+    
+        
+        margin: auto;
+
+    }
+    #Youritem>div{
+        text-align: center;
+        transition: 0.5s ease-in-out;
+    }
+    #Youritem>div>img{
+        
+      height: 330px;
+      width: 284px;
+      transition: 0.5s ease-in-out;
+  
+    }
+    h1{
+        text-align: center;
+        animation:  1s linear infinite;
+    }s
+    h1 {
+        position: absolute;
+        font-size: 30px;
+        margin-bottom: 25px;
+        margin-top: 5px;
+        margin-left:37%;
+        /* text-align:center; */
+        color:red;
+        text-shadow: 0 0 0.3vw #90d536;
+        text-transform: uppercase;
+        user-select: none;
+        opacity: 70%;
+    }
+
+    h1::before {
+        content: attr(title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: red;
+        text-shadow: 0 0 0.3vw #c726c2;
+        border-right: 2px solid green;
+        overflow: hidden;
+        animation: animate 7s linear ;
+    }
+
+    @keyframes animate {
+
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+
+        70%,
+        90% {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <h1><b><u>YOUR WISHLISTS</u></b></h1>
+
+    <div id="Youritem">
+        <!-- Append here -->
+    </div>
+</body>
+<script>
+    data=JSON.parse(localStorage.getItem("productlist"))
+    data.forEach(function(elem)
+    {
+        var box=document.createElement("div")
+        var image=document.createElement("img")
+      image.setAttribute("src",elem.productimage)
+      var name=document.createElement("h2");
+      name.innerText=elem.productname
+      var price=document.createElement("p")
+      price.innerText=elem.price
+      var btn=document.createElement("button")
+      btn.innerText="Delete"
+      btn.style.cursor="pointer"
+      btn.addEventListener("click",function()
+      {
+          play(elem)
+      })
+      box.append(image,name,price,btn)
+      document.querySelector("#Youritem").append(box)
+        
+    })
+    function play(elem){
+        event.target.parentNode.remove();
+
+  event.target.parentNode.innerHTML = "";
+    }
+</script>
+</html>

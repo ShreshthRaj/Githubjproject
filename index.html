@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/39dce68ee5.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #part1>div {
+
+        justify-content: space-evenly;
+        padding: 25px;
+        text-decoration: double;
+
+    }
+
+    #part1>div:hover {
+        background-color: red;
+    }
+
+    #part2>div:first-child {
+        padding: 25px;
+        /* background-color: teal */
+
+    }
+
+    #part2>div:last-child {
+        padding: 25px;
+        /* background-color:green; */
+    }
+
+    #part1 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #part2>div:first-child:hover {
+        background-color: green;
+    }
+
+    #part2>div:last-child:hover {
+        background-color: green;
+    }
+
+    #part2 {
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    nav {
+        justify-content: space-between;
+        display: flex;
+        background-color: black;
+        color: white;
+    }
+
+    h1 {
+        /* padding-left: 15px; */
+        margin-left: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 1px solid red;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    /*       
+      a{
+          text-decoration: none;
+          color: white;
+      } */
+    a {
+        /* cursor: pointer; */
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+
+    #products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 15px 15px;
+        width: 81%;
+
+
+        margin: auto;
+
+    }
+
+    #products>div {
+        text-align: center;
+
+    }
+
+    #products>div>img {
+        height: 330px;
+        width: 284px;
+        transition: 0.5s ease-in-out;
+    }
+
+    footer {
+        background-color: #121214;
+        height: 451px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    #foots {
+        color: white;
+        display: flex;
+        font-family: sans-serif;
+        padding: 51px;
+        list-style: none;
+
+    }
+
+    #foots>div>ul {
+        list-style: none;
+        padding-left: 91px;
+        margin-left: 51px;
+    }
+
+    #foots>div>ul>li {
+        padding: 7px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    #foots>div:last-child {
+        text-align: justify;
+        padding-left: 15px;
+        padding-right: 51px;
+        text-align: center;
+    }
+
+    #foots>div:last-child>p {
+        padding: 15px;
+        margin-left: 15px;
+        padding-right: 1=51px;
+
+        /* text-align: justify; */
+        line-height: 20px;
+        color: red;
+    }
+
+    h3 {
+        position: absolute;
+        font-size: 30px;
+        margin-bottom: 25px;
+        margin-top: -15px;
+        margin-left: 51px;
+        /* text-align:center; */
+        color: #252839;
+        text-shadow: 0 0 0.3vw #383d52;
+        text-transform: uppercase;
+        user-select: none;
+        opacity: 70%;
+    }
+
+    h3::before {
+        content: attr(title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: red;
+        text-shadow: 0 0 0.3vw #383d52;
+        border-right: 2px solid #01fe87;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+    }
+
+    @keyframes animate {
+
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+
+        70%,
+        90% {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <div>
+            <h1>
+                Apna dukaan
+            </h1>
+        </div>
+        <div id="part1">
+            <div>
+                <a href="men.html">Men</a>
+                <!-- <a href="men.html"><div>Men</div></a> -->
+
+            </div>
+            <div><a href="women.html">Women</a></div>
+            <div><a href="boy.html">Boy</a></div>
+            <div><a href="girl.html">Girl</a></div>
+        </div>
+        <div id="part2">
+
+            <div id="login"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></div>
+            <div id="signup"><a href="signup.html"><i class="fas fa-user"></i> Signup</a></div>
+        </div>
+    </nav>
+    <br>
+    <h3 title="SALE 50% OFF... ">
+        SALE 50% OFF...
+    </h3>
+    <a href="cart.html">
+
+    <img style="height:70px;width:70px;margin-left: 91%;color: red;cursor: pointer;" src="https://img.icons8.com/wired/344/shopping-bag--v2.png" alt="">
+
+    </a>
+    <br>
+    <br>
+
+    <div id="products">
+
+    </div>
+    <footer>
+        <main id="foots">
+            <div>
+                <ul>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Call +916204989916</li>
+                    <li>Whatsapp-+918809357001</li>
+                    <li>Email- care@apnadukaan.com</li>
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Franchise</li>
+                    <li>Feedback</li>
+                    <li>Disclaimer</li>
+                    <li>Legal</li>
+                    <li>Privacy Policy</li>
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Shipping policy</li>
+                    <li>Refund Policy</li>
+                    <li>Terms Conditions</li>
+                    <li>Connect with us</li>
+                    <li>Email us</li>
+
+                </ul>
+            </div>
+            <div>
+                <!-- <ul>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Call us</li>
+                    <li>Whatsapp us</li>
+                    <li>Email us</li>
+                    <li>Franchise</li>
+                </ul> -->
+                <h2>Be the First to Know</h2>
+                <br>
+                <p>Get all the latest information on Events,
+                    Sales and Offers. Sign up for newsletter
+                    today.
+                </p>
+                <label for="input">Enter your email adress</label><br>
+                <br>
+                <input type="search" placeholder="Type your email address">
+                <button style="padding: 2px;">Go</button>
+            </div>
+        </main>
+        <p id="info1">© 2017 Catalyst Retail Pvt. Ltd. All Rights Reserved. The website www.apnadukaan.com is owned
+            and operated by Catalyst Retail Pvt. Ltd. Your use of this website signifies your agreement to the terms of
+            use of this website.All
+            brand and product names and associated logos contained within this website belong to thier respective
+            ownwers
+            and are protected by copyright. Names nad Images above are for representational purpose only to serve as a
+            guide
+            to the user of the website and SparesHub.com is in no way associated with any of the above mentioned
+            automobile manufacturers.
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script>
+    var datas = [
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2021/05/ryan-reynolds-768x959.jpg",
+            productname: "Best cotton T-shirt",
+            price: " Price:51$",
+        },
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2021/05/chris-pratt-768x882.jpg",
+            productname: "Italian Blazer(shined version)",
+            price: " Price:200$",
+        },
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2020/11/Emma-Watson-768x910.jpg",
+            productname: "Top-Skirt",
+            price: " Price:99$",
+        },
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2021/05/tom-hardy-768x960.jpg",
+            productname: "Checkstyle Shirts",
+            price: " Price:45$",
+        },
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2021/05/Robert-Downey-Jr..jpg",
+            productname: "Full black Shiny formal suit",
+            price: " Price:151$",
+        },
+        {
+            productimage: "https://www.mrdustbin.com/en/wp-content/uploads/2020/11/jennifer-lawrence-768x786.jpg",
+            productname: "Revolution T-shirts",
+            price: " Price:87$",
+        }
+
+    ]
+    datas.forEach(function (elem) {
+        var box = document.createElement("div")
+        var image = document.createElement("img")
+        image.setAttribute("src", elem.productimage)
+        var name = document.createElement("h2");
+        name.innerText = elem.productname;
+        var price = document.createElement("p")
+        price.innerText = elem.price
+        var btn = document.createElement("button")
+        btn.innerText = "Add to Cart"
+        btn.style.cursor = "pointer"
+        btn.addEventListener("click", function () {
+            play(elem)
+        })
+        box.append(image, name, price, btn)
+        document.querySelector("#products").append(box)
+    })
+    var data = JSON.parse(localStorage.getItem("productlist")) || []
+    function play(elem) {
+        data.push(elem)
+        localStorage.setItem("productlist", JSON.stringify(data))
+        window.location.href = "cart.html"
+    }
+</script>
+<!-- 
+<script>
+    var datas = [
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        },
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        },
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        },
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        },
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        },
+        {
+            productimage: "https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-01.jpg",
+            productname: "Top-Skirt",
+            price: "99$"
+        }
+
+    ]
+    datas.forEach(function(elem){
+        var box = document.createElement("div")
+        var image = document.createElement("img")
+        image.setAttribute("src",elem.productimage)
+        var name = document.createElement("h2");
+        name.innerText = elem.productname
+        var price = document.createElement("p")
+        price.innerText = elem.price
+        var btn = document.createElement("button")
+        btn.innerText = "Add to Cart"
+        btn.addEventListener("click", function () {
+            play(elem)
+        })
+        box.append(image,name,price,btn)
+        document.querySelector("#products").append(box)
+    })
+    var data = JSON.parse(localStorage.getItem("productlist")) || []
+    function play(elem) {
+        data.push(elem)
+        localStorage.setItem("productlist", JSON.stringify(data))
+        window.location.href = "cart.html"
+    }
+</script> -->
